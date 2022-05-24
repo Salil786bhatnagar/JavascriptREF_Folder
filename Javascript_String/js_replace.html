@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1">Please visit Microsoft!</p>
+    <p id="demo2">Please visit Microsoft!</p>
+    <p id="demo3">Please visit Microsoft!</p>
+    <p id="demo4">Please visit Microsoft! and big company of  Microsoft</p>
+    <p id="demo5">this is upsercase</p>
+    <p id="demo6">THIS IS LOWERCASE</p>
+    <button onclick="Replacefun1()">Click me</button>
+    <button onclick="Replacefun2()">Click me</button>
+    <button onclick="Replacefun3()">Click me</button>
+    <button onclick="Replacefun4()">Click me</button>
+    <button onclick="Replacefun5()">Click me Uppercase</button>
+    <button onclick="Replacefun6()">Click me Lowercase</button>
+    <script>
+      function Replacefun1(){
+          let text = document.getElementById('demo1').innerHTML;
+          document.getElementById('demo1').innerHTML=text.replace("Microsoft","Linkined")
+         
+      }
+      function Replacefun2(){
+          let text = document.getElementById('demo2').innerHTML;
+          
+          document.getElementById('demo2').innerHTML=text.replace("MICROSOFT","Linkined")//case sensative in string replace
+        
+      }
+      function Replacefun3(){
+        let text = document.getElementById('demo3').innerHTML;
+          document.getElementById('demo3').innerHTML=text.replace(/MICROSOFT/i,"Linkined")//regular expression /i in string replace
+      }
+
+      function Replacefun4(){
+        let text = document.getElementById('demo4').innerHTML;
+          document.getElementById('demo4').innerHTML=text.replace(/Microsoft/g,"Linkined")// (global match) /g uisng sting replace
+      }
+
+      function Replacefun5(){
+        let text = document.getElementById('demo5').innerHTML;
+          document.getElementById('demo5').innerHTML=text.toUpperCase()//  toUppercase sting replace
+      }
+
+      function Replacefun6(){
+        let text = document.getElementById('demo6').innerHTML;
+          document.getElementById('demo6').innerHTML=text.toLowerCase()//  toUppercase sting replace
+      }
+    </script>
+</body>
+</html>

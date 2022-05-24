@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Array Object Method</h1>
+     <script>
+         var student={
+             name:'ram',
+             lname:'sharma',
+             contact:'9876545670',
+             address:'indore',
+             state:'madhya pradesh',
+             city:'indore',
+             email:'ram@gmail.com',
+             living:{
+               City:'Pune',
+               Country:'India',
+               CompanyName:'Tcs',
+             },
+             product:['Man t-shart','Woman kurti','Man jeens','Kids Cloths'],//add array list
+             studentSalary:function (){// Array Object Method 
+                 return 25000;
+             },
+             studentFullName:function(){
+                 return this.name+ " "+this.lname
+             }
+
+         }
+         console.log("studentInfo:",student.studentSalary());
+         console.log("studentInfo:",student);
+         document.write("Name:"+student.name+"<br>"+"Last Name:"+student.lname+"<br>"+"Contact:"+student.contact+"<br>"+"Address"+student.address+"<br>"+"State:"+student.state+"<br>"+"City:"+student.city+"<br>"+"Email:"+student.email+"<br>");
+         
+         document.write("<hr/>"+"<b><u>Product list:</u></b>",student.product,"<br><hr/>");
+
+         document.write("This is Array Method"+"<hr/>"+"<b><u>Student Salary:</u></b>",student.studentSalary(),"<br><hr/>");//array object method
+
+         document.write("<hr/>"+"<b><u>Full Name</u></b>:"+student.studentFullName()+"<br>"+"<hr/>")//array object method
+
+         document.write("<hr/>"+"<b><u>User details</u></b>:"+"City Name:"+student.living.City+"<br>"+"Countery Name:"+student.living.Country+"<br>"+"<hr/>")//array object method
+     </script>    
+</body>
+</html>
